@@ -1,0 +1,112 @@
+
+
+<div class="title-band">
+    <span>Reference Data</span>
+</div>
+
+<div class="container">
+  <div class="ag-theme-material" style="height: 400px; width: 600px;">
+    <ag-grid-angular
+      style=" height: 100%;"
+      class="ag-theme-alpine"
+      [rowData]="refGroups"
+      [columnDefs]="columnDefsGroup"
+      [defaultColDef]="{ resizable: true, sortable: true, filter: true }"
+      [pagination]="true"
+      [paginationPageSize]="5"
+      (gridReady)="onGridReadyGroup($event)"
+      (rowClicked)="onGroupClicked($event)">
+        </ag-grid-angular>
+  </div>
+
+  <div class="form-container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="reference-data-form">
+      <mat-card class="group-card">
+        <mat-card-header >
+          <mat-card-title>Group</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Group ID</mat-label>
+            <input matInput formControlName="groupId" required>
+            <mat-error *ngIf="form.get('groupId')?.hasError('required')">
+              Group ID is required
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Group Name</mat-label>
+            <input matInput formControlName="groupName">
+            <mat-error *ngIf="form.get('groupName')?.hasError('required')">
+              Group name is required
+            </mat-error>
+            <mat-error *ngIf="form.get('groupName')?.hasError('maxlength')">
+              Group name must be less than or equal to 100 characters
+            </mat-error>
+          </mat-form-field>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="ref-data-card">
+        <mat-card-header>
+          <mat-card-title>Data</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div formArrayName="refDataList">
+
+            <div class="ag-theme-material" style="height: 400px; width: 600px;">
+              <ag-grid-angular
+                style="width: 100%; height: 100%;"
+                class="ag-theme-alpine"
+                [rowData]="rowData"
+                [columnDefs]="columnDefs"
+                [defaultColDef]="{ resizable: true, sortable: true, filter: true }"
+                [pagination]="true"
+                [paginationPageSize]="5"
+                (gridReady)="onGridReady($event)">
+              </ag-grid-angular>
+            </div>
+            <button mat-raised-button color="primary" (click)="addEmptyRow()">Add Empty Row</button>
+           
+
+            <!--div *ngFor="let refData of refDataList.controls; let i = index" [formGroupName]="i" class="ref-data-row">
+              <mat-form-field appearance="fill" class="half-width">
+                <mat-label>Ref Code</mat-label>
+                <input matInput formControlName="refCode" required>
+                <mat-error *ngIf="refData.get('refCode')?.hasError('required')">
+                  Ref code is required
+                </mat-error>
+                <mat-error *ngIf="refData.get('refCode')?.hasError('maxlength')">
+                  Ref code must be less than or equal to 30 characters
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" class="half-width">
+                <mat-label>Ref Name</mat-label>
+                <input matInput formControlName="refName">
+                <mat-error *ngIf="refData.get('refName')?.hasError('required')">
+                  Reference name code is required
+                </mat-error>
+                <mat-error *ngIf="refData.get('refName')?.hasError('maxlength')">
+                  Reference name must be less than or equal to 100 characters
+                </mat-error>
+              </mat-form-field>
+
+              <button mat-icon-button (click)="removeRefData(i)">
+                <mat-icon color="warn" >delete</mat-icon>
+              </button>
+            </div-->
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" type="button" (click)="addRefData()">Add</button>
+        </mat-card-actions>
+      </mat-card>
+
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit">Save</button>
+        <button mat-raised-button color="warn" type="button" (click)="onCancel()">Cancel</button>
+      </mat-card-actions>
+    </form>
+  </div>
+</div>

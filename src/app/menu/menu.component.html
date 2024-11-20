@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" class="menu-bar">
+    <button mat-button [matMenuTriggerFor]="adminMenu">Admin</button>
+    <button mat-button>Master</button>
+    <button mat-button>Transactions</button>
+    <button mat-button>Other</button>
+  </mat-toolbar>
+  
+  <mat-menu #adminMenu="matMenu">
+    <button mat-menu-item [routerLink]="['/admin/ref-data/form']">Reference Data</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item [routerLink]="['/admin/reference-data/form']">Test</button>
+    <button mat-menu-item [routerLink]="['/editable-grid']">Grid</button>
+    <button mat-menu-item [routerLink]="['/ag-grid-example']">AG Grid</button>
+  
+    <button mat-menu-item>User1</button>
+    <button mat-menu-item>References</button>
+  </mat-menu>

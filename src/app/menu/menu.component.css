@@ -1,0 +1,13 @@
+.menu-bar {
+    background: linear-gradient(to right, var(--end-color),var(--end-color));
+    height: 35px;
+    padding-left: 0px;
+    position: fixed; /* Fix the title band at the top */
+    top: 50px; /* Adjust this value based on the height of the navigation bar */
+    left: 0;
+    width: 100%;
+}
+
+.mat-mdc-menu-item, .mat-mdc-menu-item:visited, .mat-mdc-menu-item:link {
+    MIN-HEIGHT: 30PX;
+}

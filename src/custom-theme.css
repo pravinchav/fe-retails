@@ -1,0 +1,43 @@
+:root {
+  --primary-color: #3f51b5; /* Indigo */
+  --primary-contrast: #ffffff;
+  --accent-color: #e91e63; /* Pink */
+  --accent-contrast: #ffffff;
+  --warn-color: #f44336; /* Red */
+  --warn-contrast: #ffffff;
+}
+
+.mat-primary {
+  background-color: var(--primary-color) !important;
+  color: var(--primary-contrast) !important;
+}
+
+.mat-accent {
+  background-color: var(--accent-color) !important;
+  color: var(--accent-contrast) !important;
+}
+
+.mat-warn {
+  background-color: var(--warn-color) !important;
+  color: var(--warn-contrast) !important;
+}
+
+.mat-toolbar {
+  background-color: var(--primary-color) !important;
+  color: var(--primary-contrast) !important;
+}
+
+.mat-button.mat-primary {
+  background-color: var(--primary-color) !important;
+  color: var(--primary-contrast) !important;
+}
+
+.mat-button.mat-accent {
+  background-color: var(--accent-color) !important;
+  color: var(--accent-contrast) !important;
+}
+
+.mat-button.mat-warn {
+  background-color: var(--warn-color) !important;
+  color: var(--warn-contrast) !important;
+}

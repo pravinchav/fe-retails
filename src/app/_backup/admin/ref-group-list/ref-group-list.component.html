@@ -1,0 +1,38 @@
+<div class="group-list-content">
+  <input type="text" [formControl]="searchControl" placeholder="Search Groups" class="search-input">
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+    <!-- Radio Button Column -->
+    <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let group">
+        <mat-radio-button [value]="group" (change)="selectGroup(group)"></mat-radio-button>
+      </td>
+    </ng-container>
+
+    <!-- Group ID Column -->
+    <ng-container matColumnDef="groupId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Group ID </th>
+      <td mat-cell *matCellDef="let group"> {{ group.groupId }} </td>
+    </ng-container>
+
+    <!-- Group Name Column -->
+    <ng-container matColumnDef="groupName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Group Name </th>
+      <td mat-cell *matCellDef="let group"> {{ group.groupName }} </td>
+    </ng-container>
+
+    <!-- Actions Column -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <td mat-cell *matCellDef="let group">
+        <button mat-icon-button (click)="deleteGroup(group)" matTooltip="Delete Group" class="delete-button">
+          <mat-icon color="warn" >delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <!-- Header and Row Declarations -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

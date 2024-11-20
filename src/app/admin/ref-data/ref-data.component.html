@@ -1,0 +1,17 @@
+<div class="page-title">
+    <span>Reference Data</span>
+</div>
+
+
+  <div>
+    <ag-grid-angular 
+      class="ag-theme-material ag-grid-custom quarter-width"
+      [rowData]="refGroups"
+      [columnDefs]="columnDefsGroups"
+      [defaultColDef]="{ sortable: true, filter: true }"
+      rowSelection="multiple"
+      (gridReady)="onGridReadyGroups($event)">
+    </ag-grid-angular>
+    <button mat-raised-button color="warn" [disabled]="!isRowSelected" (click)="deleteSelectedRows()">Delete</button>
+    
+  </div>

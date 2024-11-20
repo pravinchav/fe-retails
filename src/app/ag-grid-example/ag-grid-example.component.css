@@ -1,0 +1,21 @@
+.ag-theme-alpine {
+  height: 400px;
+  width: 600px;
+  margin-top: 200px;
+}
+
+.search-container {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}

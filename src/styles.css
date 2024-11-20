@@ -1,0 +1,190 @@
+
+
+:root {
+  --main-color: #197b76;
+  --mid-color: #ccc;
+  --end-color: #dfdede;
+  --mdc-protected-button-label-text-color:  #000000;
+  --mdc-protected-button-container-shape: 0px;
+  --mdc-protected-button-container-color: var(--mid-color);
+  --plain-color: #ffffff;
+
+
+}
+
+          
+.ag-theme-material
+{
+  --ag-material-primary-color: #3f51b5 !important;
+  --ag-material-accent-color: #7789ec !important;
+  --ag-checkbox-unchecked-color: #9c9c9c !important; 
+  --ag-cell-horizontal-padding: 10px !important ;
+  --ag-grid-size: 6px !important;
+  --ag-header-background-color: var(--end-color) !important;
+  margin-bottom:10px;
+  border: 1px solid var(--mid-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+
+}
+/* ===========================
+   Global Styles
+   =========================== */
+body {
+  overflow: hidden; /* Hide the scrollbar */
+}
+
+.container{
+  margin-top:125px;
+}
+
+.page-title {
+  padding: 5px 10px;
+  top:85px;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ffffff;
+  height: 25px;
+  font-weight: 500;
+  background-color: var(--mid-color);
+  position: fixed; /* Fix the title band at the top */
+  left: 0;
+  width: 100%;
+  text-decoration: underline;
+}
+
+/* ===========================
+   Secions
+   =========================== */
+.full-width {
+  width: 100%;
+}
+
+.half-width {
+  width: calc(50% - 10px);
+  margin-right: 10px;
+}
+
+.onethird-width {
+  width: calc(33% - 10px);
+  margin-right: 10px;
+}
+
+.quarter-width {
+  width: calc(25% - 10px);
+  margin-right: 10px;
+}
+
+/* ===========================
+   Padding
+   =========================== */
+
+.p-0 {
+  padding: 0px;
+}
+
+
+/* ===========================
+   Custom AG Grid Styles
+   =========================== */
+
+.ag-grid-custom {
+  width: auto;
+  height: 70vh;
+  
+}
+
+
+.ag-ltr .ag-cell {
+  border-left: 1px solid var(--mid-color) !important;
+}
+
+.ag-header-cell {
+  border-left: 1px solid var(--mid-color) !important;
+}
+
+
+/* ===========================
+   Other
+   =========================== */
+
+
+.mat-mdc-card-header {
+  padding: 0px 16px 0 !important;
+}
+
+.mat-mdc-card-title{
+  font-size: 1.2rem !important; /* Smaller font size */
+  text-decoration: underline;
+  padding-bottom: 10px;
+}
+
+.mat-mdc-card{
+  background-color: var(--plain-color) !important;
+}
+
+.mat-mdc-header-row, .mat-mdc-header-cell{
+  background-color: var(--mid-color) !important;
+  height: auto !important;
+  padding: 5px !important;
+ 
+}
+
+.mat-mdc-table tbody, .mat-mdc-table tfoot, .mat-mdc-table thead, .mat-mdc-cell, .mat-mdc-footer-cell, .mat-mdc-header-row, .mat-mdc-row, .mat-mdc-footer-row, .mat-mdc-table .mat-mdc-header-cell {
+  height: auto !important;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: white !important;
+  border: 1px solid var(--mid-color);
+  border-radius: 7px;
+}
+
+mat-card {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.delete-button {
+  background: inherit;
+  border: 0px;
+}
+
+
+
+mat-card-actions {
+  justify-content: flex-start !important;
+  gap: 10px;
+}
+
+.mat-mdc-raised-button, .mat-mdc-raised-button .mdc-button__ripple {
+  border-radius: 10px !important;
+}
+
+.mat-mdc-form-field:not(.mat-form-field-disabled) .mat-mdc-floating-label.mdc-floating-label {
+  background-color: var(--mid-color) !important;
+  padding: 2px;
+  
+}
+/*
+.ag-theme-material .ag-row-last:not(.ag-row-first) .ag-cell-inline-editing, .ag-theme-material-dark .ag-row-last:not(.ag-row-first) .ag-cell-inline-editing, .ag-theme-material-auto-dark .ag-row-last:not(.ag-row-first) .ag-cell-inline-editing {
+  height: inherit !important;
+}
+
+.ag-theme-material .ag-cell-inline-editing, .ag-theme-material-dark .ag-cell-inline-editing, .ag-theme-material-auto-dark .ag-cell-inline-editing {
+  height: inherit !important;
+}
+.ag-theme-material input[class^=ag-][type=text]
+{
+  border: 0px solid !important;
+}
+
+.ag-ltr .ag-cell {
+  /* border-right-width: 1px; 
+  border-right: 1px solid #ccc !important;
+}*/

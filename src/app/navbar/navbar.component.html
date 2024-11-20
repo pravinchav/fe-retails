@@ -1,0 +1,15 @@
+<mat-toolbar color="primary" class="navbar">
+    <span class="title">Test App</span>
+    <span class="spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="profileMenu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #profileMenu="matMenu">
+      <button mat-menu-item>Sign In</button>
+      <button mat-menu-item>Sign Out</button>
+    </mat-menu>
+  </mat-toolbar>
+  <app-menu></app-menu>
+  <div class="container">
+    <!-- Your content goes here -->
+  </div>

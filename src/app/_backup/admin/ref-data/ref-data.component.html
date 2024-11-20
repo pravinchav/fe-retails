@@ -1,0 +1,19 @@
+<div class="title-band">
+    <span>Reference Data</span>
+</div>
+
+
+  <div class="ag-theme-material grid quarter-width resizable" #resizableDiv >
+    <div class="resize-handle" (mousedown)="onMouseDown($event)"></div>
+ 
+    <button mat-raised-button color="warn" [disabled]="!isRowSelected" (click)="deleteSelectedRows()">Delete Selected Rows</button>
+    <ag-grid-angular
+      style=" height: 100%;"
+      class="ag-theme-alpine"
+      [rowData]="refGroups"
+      [columnDefs]="columnDefsGroups"
+      [defaultColDef]="{ resizable: true, sortable: true, filter: true }"
+      rowSelection="multiple"
+      (gridReady)="onGridReadyGroups($event)">
+    </ag-grid-angular>
+  </div>

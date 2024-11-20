@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.group-list {
+  width: 35%;
+  padding: 0;
+  border-right: 1px solid #ccc;
+}
+
+
+.form-container {
+  width: 65%;
+  padding: 0;
+}
+
+
+
+
+.ref-data-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.remove-button {
+  margin-top: 10px;
+}
+
+
+
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+mat-toolbar {
+  margin-bottom: 10px;
+}
+
+.group-card {
+  margin-bottom: 20px;
+}
+
+.ref-data-card {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+}
+

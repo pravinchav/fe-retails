@@ -1,0 +1,31 @@
+.navbar {
+  background: linear-gradient(to right,var(--main-color), var(--end-color));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: fixed; /* Fix the title band at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+  height: 50px;
+}
+
+  
+  .title {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  .profile-button {
+    margin-left: auto;
+  }
+
+  .mat-mdc-menu-item, .mat-mdc-menu-item:visited, .mat-mdc-menu-item:link {
+    MIN-HEIGHT: 30PX;
+}

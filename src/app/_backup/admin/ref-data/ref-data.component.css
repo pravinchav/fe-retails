@@ -1,0 +1,52 @@
+.title-band {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .quarter-width {
+    width: 25%;
+  }
+  
+  .full-height {
+    height: 100%;
+  }
+  
+  .grid {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ag-theme-material {
+    flex: 1;
+  }
+  
+  .ag-theme-alpine {
+    flex: 1;
+  }
+  
+  .resizable {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .resize-handle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    cursor: ew-resize;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .resizing {
+    cursor: ew-resize;
+  }

@@ -1,0 +1,30 @@
+.group-list-content {
+  padding: 0px;
+}
+
+.search-input {
+ 
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+}
+
+th.mat-header-cell, td.mat-cell {
+  padding: 8px;
+}
+
+mat-radio-button {
+  display: block;
+}
+
+
+
+button.mat-icon-button:hover {
+  background-color: rgba(244, 67, 54, 0.1); /* Light red background on hover */
+}
+
